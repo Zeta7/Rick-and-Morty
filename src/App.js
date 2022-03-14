@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import {react, useState, useEffect} from 'react';
+import axios from 'axios';
 import './App.css';
+import LocationInfo from './components/LocationInfo';
+import ResidentsList from './components/ResidentsList';
 
 function App() {
+
+  const [dato, setDato] = useState([])
+
+  const id = Math.floor(Math.random()*126) + 1;
+    useEffect(()=>{
+      axios.get(`https://rickandmortyapi.com/api/location/${id}/`)
+        .then(res=>{
+          console.log(res.data)
+          setDato(res.data)
+        })
+    },[])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='mural'></div>
+      <LocationInfo object={dato}/>
+      <ResidentsList list={dato.residents}/>
     </div>
   );
 }
