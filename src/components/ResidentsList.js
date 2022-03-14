@@ -1,4 +1,3 @@
-import {react, useEffect, useState} from 'react';
 import ResidentInfo from './ResidentInfo';
 
 const ResidentsList = ({list = []}) =>{
