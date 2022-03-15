@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import LocationInfo from './components/LocationInfo';
 import ResidentsList from './components/ResidentsList';
+import SearchBox from './components/SearchBox';
 
 function App() {
 
@@ -20,7 +21,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className='mural'></div>
+      <div className='mural'>
+        <h1>Rick and Morty</h1>
+    <SearchBox setLocation={setDato}/>
+      </div>
       <LocationInfo object={dato}/>
       <ResidentsList list={dato.residents}/>
     </div>
