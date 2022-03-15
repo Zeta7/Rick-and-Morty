@@ -7,7 +7,7 @@ const ResidentInfo = ({link}) =>{
     const [info, setInfo] = useState({});
 
     const url = link;
-    useEffect(()=>{
+    useEffect((url)=>{
         axios.get(url)
             .then(res=>{
                 //console.log(res.data);
@@ -15,7 +15,6 @@ const ResidentInfo = ({link}) =>{
             })
     },[]);
         let episodies = info.episode?.length;
-
 
     return (
         <div className='card'>
