@@ -53,7 +53,7 @@ body{
 .card{
   background-color: #062226;
   width: 300px;
-  height: 520px;
+  height: 530px;
   color: white;
   display: flex;
   flex-direction: column;
