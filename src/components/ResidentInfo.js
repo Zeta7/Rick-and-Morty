@@ -7,8 +7,7 @@ const ResidentInfo = ({link}) =>{
     const [info, setInfo] = useState({});
 
     useEffect(()=>{
-        const url = link;
-        axios.get(url)
+        axios.get(`${link}`)
             .then(res=>{
                 //console.log(res.data);
                 setInfo(res.data);
