@@ -8,13 +8,13 @@ const ResidentInfo = ({link}) =>{
 
     useEffect(()=>{
         axios.get(link)
-        .then(res=>{
-        //console.log(res.data);
-        setInfo(res.data)
-    })
+            .then(res=>{
+                //console.log(res.data);
+                setInfo(res.data);
+            })
     },[]);
+        let episodies = info.episode?.length;
 
-    let episodies = info.episode?.length;
 
     return (
         <div className='card'>
