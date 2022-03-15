@@ -34,7 +34,6 @@ body{
   display: flex;
   justify-content: space-around;
   border-radius: 10px ;
-  
 }
 h1{
   margin-bottom: 150px;
@@ -122,5 +121,44 @@ hr{
 }
 .card h5{
   margin: 5px 0px;
+}
+
+@media screen and (max-width:650px) {
+  body{
+    width: 100vw;
+  }
+  .sub_cont_LocationInfo{
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .cont_LocationInfo{
+    width:90vw;
+    height: 150px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.494);
+    margin: 20px 0px 30px 0px;
+  
+  }
+  .sub_cont_LocationInfo h5{
+    margin: 5px 5px;
+  }
+  h1{
+    margin-bottom: 150px;
+    font-size: 30px;
+    color: #f3f3f3;
+    filter: drop-shadow( 8px 8px 7px rgb(0, 0, 0));
+  }
+  .cont_search{
+    width: 90vw;
+    height: 40px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.933);
+  }
 }
 
