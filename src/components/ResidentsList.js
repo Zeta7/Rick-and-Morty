@@ -1,3 +1,4 @@
+import React from 'react';
 import ResidentInfo from './ResidentInfo';
 
 const ResidentsList = ({list = []}) =>{
