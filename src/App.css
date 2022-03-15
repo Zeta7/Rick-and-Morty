@@ -45,6 +45,7 @@ body{
 }
 
 .cont_list{
+  width: 80vw;
   height: auto;
   display: flex;
   flex-wrap: wrap;
