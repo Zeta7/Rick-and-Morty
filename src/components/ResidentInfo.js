@@ -12,7 +12,8 @@ const ResidentInfo = ({link}) =>{
                 //console.log(res.data);
                 setInfo(res.data);
             })
-    },[]);
+    },[link]);
+
         let episodies = info.episode?.length;
 
     return (

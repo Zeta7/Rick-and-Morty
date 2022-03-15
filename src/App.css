@@ -45,9 +45,11 @@ body{
 }
 
 .cont_list{
-  background-color: #418a94;
-  width: 80vw;
   height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card{
